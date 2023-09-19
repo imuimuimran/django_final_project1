@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <section class="section-content padding-y bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <div class="card">
+            <table class="table table-borderless table-shopping-cart">
+              <tbody>
+
+                <h2>Your Wishlist</h2>
+                <ul>
+                    {% for item in wishlist_items %}
+                      <tr>
+                        <td>
+                          <figure class="itemside align-items-center">
+                            
+                            <figcaption class="info">
+                              <a>{{ item.book.title }}</a>
+                              <p class="text-muted small">Author: {{ item.book.author }}</p>
+                            </figcaption>
+                          </figcaption>
+                        </td>
+                        <td class="text-right">
+                        </td>
+                      </tr>
+                     
+                    {% endfor %}
+                </ul>
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

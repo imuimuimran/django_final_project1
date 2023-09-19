@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+ 
+{% block body %}
+
+<section class="section-intro padding-y-sm">
+<div class="container">
+<div class="intro-banner-wrap">
+	<img src="{% static 'images/banners/lib_9.jpg' %}" class="img-fluid rounded">
+</div>
+
+</div> <!-- container //  -->
+</section>
+<!-- ========================= SECTION MAIN END// ========================= -->
+
+<!-- ========================= SECTION  ========================= -->
+<section class="section-name padding-y-sm">
+<div class="container">
+
+<header class="section-heading">
+	{% comment %} <a href="./book_store.html" class="btn btn-outline-primary float-right">See all</a> {% endcomment %}
+	<h3 class="section-title">Popular Books</h3>
+</header><!-- sect-heading -->
+
+	
+<div class="row">
+	<div class="col-md-3">
+		<div class="card card-product-grid">
+			<a href="./product-detail.html" class="img-wrap"> <img src="{% static 'images/Charlottes_Web.jpg' %}"> </a>
+			<figcaption class="info-wrap">
+				<a href="http://127.0.0.1:8000/book_management/book_management/book_detail/childish/charlottes-web/" class="title">Charlotte's Web</a>
+				<div class="price mt-1">Author: E.B.White</div> <!-- price-wrap.// --> 
+			</figcaption>
+		</div>
+	</div> <!-- col.// -->
+	<div class="col-md-3">
+		<div class="card card-product-grid">
+			<a href="./product-detail.html" class="img-wrap"> <img src="{% static 'images/Song_Offerings.jpg' %}"> </a>
+			<figcaption class="info-wrap">
+				<a href="http://127.0.0.1:8000/book_management/book_management/book_detail/poetry/song-offerings/" class="title">Song Offerings</a>
+				<div class="price mt-1">Author: Rabindranath Tagore</div> <!-- price-wrap.// -->
+			</figcaption>
+		</div>
+	</div> <!-- col.// -->
+	<div class="col-md-3">
+		<div class="card card-product-grid">
+			<a href="./product-detail.html" class="img-wrap"> <img src="{% static 'images/Time_Riders.jpg' %}"> </a>
+			<figcaption class="info-wrap">
+				<a href="http://127.0.0.1:8000/book_management/book_management/book_detail/science-fiction/time-riders/" class="title">Time Riders</a>
+				<div class="price mt-1">Author: Alex Scarrow</div> <!-- price-wrap.// -->
+			</figcaption>
+		</div>
+	</div> <!-- col.// -->
+	<div class="col-md-3">
+		<div class="card card-product-grid">
+			<a href="./product-detail.html" class="img-wrap"> <img src="{% static 'images/Programming_in_C.jpg' %}"> </a>
+			<figcaption class="info-wrap">
+				<a href="http://127.0.0.1:8000/book_management/book_management/book_detail/programming/programming-in-c/" class="title">Programming in C</a>
+				<div class="price mt-1">Author: Stephen G. Kochan</div> <!-- price-wrap.// -->
+			</figcaption>
+		</div>
+	</div> <!-- col.// -->
+	<div class="col-md-3">
+		<div class="card card-product-grid">
+			<a href="./product-detail.html" class="img-wrap"> <img src="{% static 'images/Half_Girlfriend.jpg' %}"> </a>
+			<figcaption class="info-wrap">
+				<a href="http://127.0.0.1:8000/book_management/book_management/book_detail/novel/half-girlfriend/" class="title">Half Girlfriend</a>
+				<div class="price mt-1">Author: Chetan Bhagat</div> <!-- price-wrap.// -->
+			</figcaption>
+		</div>
+	</div> <!-- col.// -->
+	<div class="col-md-3">
+		<div class="card card-product-grid">
+			<a href="./product-detail.html" class="img-wrap"> <img src="{% static 'images/Paradise_Lost.jpg' %}"> </a>
+			<figcaption class="info-wrap">
+				<a href="http://127.0.0.1:8000/book_management/book_management/book_detail/poetry/paradise-lost/" class="title">Paradise Lost</a>
+				<div class="price mt-1">Author: John Milton</div> <!-- price-wrap.// -->
+			</figcaption>
+		</div>
+	</div> <!-- col.// -->
+	<div class="col-md-3">
+		<div class="card card-product-grid">
+			<a href="./product-detail.html" class="img-wrap"> <img src="{% static 'images/Cracking_the_Coding_Interview.jpg' %}"> </a>
+			<figcaption class="info-wrap">
+				<a href="http://127.0.0.1:8000/book_management/book_management/book_detail/programming/cracking-the-coding-interview/" class="title">Cracking the Coding Interview</a>
+				<div class="price mt-1">Author: Gayle Laakmann McDowell</div> <!-- price-wrap.// -->
+			</figcaption>
+		</div>
+	</div> <!-- col.// -->
+	<div class="col-md-3">
+		<div class="card card-product-grid">
+			<a href="./product-detail.html" class="img-wrap"> <img src="{% static 'images/harry_potter.jpg' %}"> </a>
+			<figcaption class="info-wrap">
+				<a href="http://127.0.0.1:8000/book_management/book_management/book_detail/science-fiction/harry-potter-and-the-order-of-the-phoenix-series-5/" class="title">Harry Potter</a>
+				<div class="price mt-1">Author: J. K. Rowling</div> <!-- price-wrap.// -->
+			</figcaption>
+		</div>
+	</div> <!-- col.// -->
+</div> <!-- row.// -->
+
+</div><!-- container // -->
+</section>
+
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <section class="section-content padding-y">
+    <div class="container">
+      <h2 class="title-page">Search Results</h2>
+
+      <div class="row">
+        {% if books %}
+          {% for item in books %}
+            <!-- Display book information here -->
+            <div class="col-md-4">
+              <figure class="card card-product-grid">
+                <div class="img-wrap">
+                  <img src="{{ item.image.url }}">
+                </div>
+                <figcaption class="info-wrap">
+                  <div class="fix-height">
+                    <a href="{% url 'book_by_category' item.genre.slug item.slug %}" class="title">{{ item.title }}</a>
+                    <div class="price-wrap mt-2">
+                      <span class="price">Author: {{ item.author }}</span>
+                    </div>
+                  </div>
+                  <a href="#" class="btn btn-block btn-success">Borrow</a>
+                </figcaption>
+              </figure>
+            </div>
+          {% endfor %}
+        {% else %}
+          <div class="col-md-12">
+            <p>No books found for the given search query.</p>
+          </div>
+        {% endif %}
+      </div>
+
+    </div>
+  </section>
+{% endblock %}

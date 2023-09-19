@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+
+<section class="section-conten padding-y bg">
+    <div class="container">
+        <!-- Other parts of your existing template -->
+
+        <div class="col-md-9">
+            <header class="section-heading">
+                <h3>My Wishlist</h3>
+            </header>
+
+            <div class="row">
+
+                <h2>Your Wishlist</h2>
+                <ul>
+                    {% for item in wishlist_books %}
+                        <li>{{ item.book.title }}</li>
+                    {% endfor %}
+                </ul>
+
+                {% for item in wishlist %}
+                <div class="col-md-4">
+                    <figure class="card card-product-grid">
+                        <div class="img-wrap">
+                            <img src="{{ item.book.image.url }}">
+                        </div>
+                        <figcaption class="info-wrap">
+                            <div class="fix-height">
+                                <a href="{% url 'book_detail' category_slug=item.book.genre.slug book_slug=item.book.slug %}" class="title">{{ item.book.title }}</a>
+                                <div class="price-wrap mt-2">
+                                    <span class="price">Author: {{ item.book.author }}</span>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

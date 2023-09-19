@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<section class="section-content padding-y bg">
+    <div class="container">
+        <h2 class="title-page">Borrowed Books</h2>
+
+        <div class="row">
+            <div class="col-md-12">
+                {% if borrowed_books %}
+                    <ul>
+                        {% for borrowed_book in borrowed_books %}
+                            <li>
+                                {{ borrowed_book.book.title }} - Borrowed Book {{ borrowed_book.borrow_date }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No books borrowed.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
